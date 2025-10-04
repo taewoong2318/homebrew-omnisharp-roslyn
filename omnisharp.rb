@@ -31,4 +31,8 @@ class Omnisharp < Formula
     chmod 0755, libexec/"OmniSharp"
     bin.install_symlink libexec/"OmniSharp"
   end
+
+  test do
+    system bin/"OmniSharp", "--help"
+  end
 end
